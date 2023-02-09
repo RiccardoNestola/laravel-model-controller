@@ -5,52 +5,26 @@
 
     <div class="container">
         <div class="row">
+            @foreach ( $movies as $movie )
+              
             
             <div class="col-12 col-md-6 col-lg-4 py-4">
                 <div class="card text-center">
                     <div class="card-header">
-                      Featured
+                       {{ $movie->nationality}}
                     </div>
                     <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <h5 class="card-title">{{ $movie->original_title}}</h5>
+                      <p class="card-text">{{ $movie->title}}</p>
+                      <a href="#" class="btn btn-primary">View Film</a>
                     </div>
                     <div class="card-footer text-muted">
-                      2 days ago
+                      Vote {{ $movie->vote}}
                     </div>
                   </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 py-4">
-                <div class="card text-center">
-                    <div class="card-header">
-                      Featured
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                      2 days ago
-                    </div>
-                  </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-4 py-4">
-                <div class="card text-center">
-                    <div class="card-header">
-                      Featured
-                    </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Special title treatment</h5>
-                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                    <div class="card-footer text-muted">
-                      2 days ago
-                    </div>
-                  </div>
-            </div>
+            @endforeach
+
         </div>
         
     </div>
